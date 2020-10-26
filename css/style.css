@@ -1,0 +1,110 @@
+/*
+*	style.css
+*	=========
+*	
+*	black			=	#000000
+*	white			=	#ffffff
+*
+*	dark_gray		=	#555353
+*
+*	yellow			=	#e9f367
+*	blue			=	#67c9f3
+*	red				=	#ed3b2b
+*
+*	light_pink		=	#fadcf9
+*
+*/
+
+html, body  {
+	position: absolute;
+	left: 0; top: 0;
+	width: 100%;
+	margin: 0; padding: 0;
+	font-family: "Verdana", sans-serif;
+	font-size: 20px;
+	background-color: #fadcf9;
+}
+
+nav {
+	padding: 5%;
+	background-color: #ffffff;
+	text-align: center;
+}
+
+#mainContent {
+	padding: 5%;
+}
+
+.neutralTile {
+	padding: 5%;
+	background-color: #e9f367;
+	height: 20px;
+	width: 20px;
+	border-radius: 25px;
+}
+
+.p1Tile {
+	background-color: #67c9f3;
+	height: 20px;
+	width: 20px;
+	padding: 5%;
+	border-radius: 25px;
+}
+
+.p2Tile {
+	background-color: #ed3b2b;
+	height: 20px;
+	width: 20px;
+	padding: 5%;
+	border-radius: 25px;
+}
+
+#gameBoard {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr;
+	column-gap: 2px;
+	background-color: #000000;
+	padding-left: 2%; padding-top: 2%; padding-bottom: 2%; 
+	width: 63%;
+	margin-top: 1%;
+	border-bottom-style: solid;
+	border-bottom-width: 100px;
+	border-color: #555353;
+}
+
+#gameBoard > div {
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+	row-gap: 5px;
+}
+
+.columnControl {
+	padding: 20px;
+	background-color: #e9f367;
+	border-radius: 2px;
+	color: #000000;
+	font-size: 1em;
+	font-weight: bold;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #000000;
+	margin-left: 5px;
+	border-bottom-width: 20px;
+}
+
+.columnControl:active {
+	color: #e9f367;
+	background-color: #000000;
+}
+
+#hero {
+	position: relative;
+	text-align: center;
+	margin-top: 2%;
+	background-color: #555353;
+	padding: 2%;
+	width: 80%;
+	left: 10%; right: auto;
+	color: #ffffff;
+}
