@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+	<title> Four in a Row | Game </title>
+	
+	<link rel="stylesheet" type="text/css" href="./css/style.css" />
+	
+  </head>
+  
+  <body>
+  
+	<nav>
+		<div>
+			<a href="./index.html">
+				<h1>Four in a Row</h1>
+			</a>
+		</div>
+		<div>
+			<a href="./index.html">
+				Home
+			</a>
+			<a href="./about.html">
+				About
+			</a>
+		</div>
+	</nav>
+	
+	<!--	The intro.		-->
+	<div id="hero">
+		<h2>Four in a Row</h2>
+		<p>The classic game of Four in a Row. Single player or vs yourself.</p>
+	</div>
+	
+	<div id="mainContent">
+	
+		<!--	The controls.	-->
+		<div id="controls">
+			<div>
+				<h3>Game Setup</h3>
+				<button id="btnYourself">VS Yourself</button>
+				<button id="btnComputer">VS Computer</button>
+				<label id="gameStatus">
+					{Game Status Here}
+				</label>
+			</div>
+			<div>
+				<h3>Game Controls</h3>
+				<button class="columnControl" id="btnCol0">SLOT 1</button>
+				<button class="columnControl" id="btnCol1">SLOT 2</button>
+				<button class="columnControl" id="btnCol2">SLOT 3</button>
+				<button class="columnControl" id="btnCol3">SLOT 4</button>
+				<button class="columnControl" id="btnCol4">SLOT 5</button>
+				<button class="columnControl" id="btnCol5">SLOT 6</button>
+				<button class="columnControl" id="btnCol6">SLOT 7</button>
+			</div>
+		</div>
+		
+		<!--	The actual game board.	-->
+		<div id="gameBoard"></div>
+	
+	</div>
+
+	<!--	The javascripts.	-->
+	<script src="./js/tile.js"></script>
+	<script src="./js/boardobj.js"></script>
+	<script src="./js/gridmanager.js"></script>
+	<script src="./js/victorycheck.js"></script>
+	<script src="./js/observer.js"></script>
+	
+	<script>
+		let bo = new BoardOBJ();
+		let gm = new GridManager();
+		bo = gm.FirstTimeSetup(bo);
+		gm.DisplayBoard(bo);
+		//console.log(bo);
+		let obs = new Observer();
+	</script>
+	
+  </body>
+</html>
